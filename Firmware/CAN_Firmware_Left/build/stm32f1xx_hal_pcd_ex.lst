@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 1
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -62,11 +58,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c **** 
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c **** /** @defgroup PCDEx PCDEx
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   * @brief PCD Extended HAL module driver
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 2
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 2
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 2
 
 
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   * @{
@@ -126,11 +118,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c **** 
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   if (fifo == 0U)
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   {
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 3
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 3
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 3
 
 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****     hpcd->Instance->DIEPTXF0_HNPTXFSIZ = ((uint32_t)size << 16) | Tx_Offset;
@@ -190,11 +178,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
  140:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   PCD_EPTypeDef *ep;
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 4
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 4
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 4
 
 
   33              		.loc 1 140 3 view .LVU1
@@ -254,11 +238,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
  168:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   }
  169:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c **** #endif /* (USE_USB_DOUBLE_BUFFER == 1U) */
  170:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c **** 
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 5
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 5
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 5
 
 
  171:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   return HAL_OK;
@@ -318,11 +298,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
  101              		.weak	HAL_PCDEx_SetConnectionState
  102              		.syntax unified
  103              		.thumb
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 6
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 6
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 6
 
 
  104              		.thumb_func
@@ -382,11 +358,7 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
  133              		@ args = 0, pretend = 0, frame = 0
  134              		@ frame_needed = 0, uses_anonymous_args = 0
  135              		@ link register save eliminated.
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 7
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 7
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 7
 
 
  201:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c ****   /* Prevent unused argument(s) compilation warning */
@@ -446,42 +418,23 @@ ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 1
  168              		.file 3 "/Applications/ArmGNUToolchain/13.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
  169              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  170              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 8
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 8
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 8
 
 
  171              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h"
  172              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h"
-<<<<<<< HEAD
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s 			page 9
-=======
-ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s 			page 9
->>>>>>> loopback
+ARM GAS  /var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_hal_pcd_ex.c
-<<<<<<< HEAD
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:19     .text.HAL_PCDEx_PMAConfig:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:25     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:100    .text.HAL_PCDEx_SetConnectionState:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:106    .text.HAL_PCDEx_SetConnectionState:00000000 HAL_PCDEx_SetConnectionState
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:122    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:128    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:144    .text.HAL_PCDEx_BCD_Callback:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//cc6ECIZq.s:150    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
-=======
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:19     .text.HAL_PCDEx_PMAConfig:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:25     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:100    .text.HAL_PCDEx_SetConnectionState:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:106    .text.HAL_PCDEx_SetConnectionState:00000000 HAL_PCDEx_SetConnectionState
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:122    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:128    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:144    .text.HAL_PCDEx_BCD_Callback:00000000 $t
-/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccOldPuz.s:150    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
->>>>>>> loopback
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:19     .text.HAL_PCDEx_PMAConfig:00000000 $t
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:25     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:100    .text.HAL_PCDEx_SetConnectionState:00000000 $t
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:106    .text.HAL_PCDEx_SetConnectionState:00000000 HAL_PCDEx_SetConnectionState
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:122    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:128    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:144    .text.HAL_PCDEx_BCD_Callback:00000000 $t
+/var/folders/8x/_y6g3dfs0698dfd49y4vcg_w0000gn/T//ccEnkS2d.s:150    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
 
 NO UNDEFINED SYMBOLS
