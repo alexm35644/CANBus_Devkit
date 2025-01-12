@@ -133,16 +133,16 @@ int main(void)
   TxHeader.RTR = CAN_RTR_DATA;
   TxHeader.DLC = 8;
 
-  TxData[0] = '0x01';  
-  TxData[1] = '0x02';
-  TxData[2] = '0x03';  
-  TxData[3] = '0x04';
-  TxData[4] = '0x05';  
-  TxData[5] = '0x06';
-  TxData[6] = '0x07';  
-  TxData[7] = '0x08';
+  TxData[0] = 0x01;  
+  TxData[1] = 0x02; 
+  TxData[2] = 0x03; 
+  TxData[3] = 0x04; 
+  TxData[4] = 0x05; 
+  TxData[5] = 0x06; 
+  TxData[6] = 0x07; 
+  TxData[7] = 0x08; 
 
-  char msg[] = "Hello, UART!\r\n";
+  //char msg[] = "Hello, UART!\r\n";
 
   HAL_CAN_ConfigFilter(&hcan,&canfil);
   HAL_CAN_Start(&hcan);
@@ -161,15 +161,17 @@ int main(void)
   {
     HAL_Delay(500);
     HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
-    //end_uart_message(msg);  // Send message
+    
+    // uint32_t free_mailboxes = HAL_CAN_GetTxMailboxesFreeLevel(&hcan);
+    // printf("Free Mailboxes: %lu\n", free_mailboxes);
     
     if (HAL_CAN_AddTxMessage(&hcan, &TxHeader, TxData, &TxMailbox) != HAL_OK)
     {
       Error_Handler ();
     }
-    if(HAL_CAN_IsTxMessagePending(&hcan, &canMailbox) != 0){
-      printf("Full mailbox\r\n");
-    }
+    // if(HAL_CAN_IsTxMessagePending(&hcan, &canMailbox) != 0){
+    //   printf("Full mailbox\r\n");
+    // }
     if (HAL_CAN_GetRxMessage(&hcan, CAN_RX_FIFO0, &RxHeader, canRX) == HAL_OK) {
       printf("received message\r");
       printf("Message length is %ld byte(s)\r\n", RxHeader.DLC);
@@ -244,49 +246,49 @@ void send_uart_message(char *message) {
     HAL_UART_Transmit(&huart1, (uint8_t *)message, strlen(message), HAL_MAX_DELAY);
 }
 
-/**
-  * @brief  Reads CANBUS message from FIFO buffer 
-  * @author Peter Woolsey
-  * @retval None
-  */
-void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
-{
-  printf("Recieved CANBUS message...\r\n");
-	if (HAL_CAN_GetRxMessage(hcan1, CAN_RX_FIFO0, &RxHeader, canRX) != HAL_OK)
-  {
-    printf("CAN Message Read Failed. HAL ERROR... \r\n");
-  }
-  else
-  {
+// /**
+//   * @brief  Reads CANBUS message from FIFO buffer 
+//   * @author Peter Woolsey
+//   * @retval None
+//   */
+// void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
+// {
+//   printf("Recieved CANBUS message...\r\n");
+// 	if (HAL_CAN_GetRxMessage(hcan1, CAN_RX_FIFO0, &RxHeader, canRX) != HAL_OK)
+//   {
+//     printf("CAN Message Read Failed. HAL ERROR... \r\n");
+//   }
+//   else
+//   {
 
-    // Get header info...
-    if (RxHeader.IDE == CAN_ID_STD)
-    {
-      printf("Message has standard ID type...\r\n");
-      printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
+//     // Get header info...
+//     if (RxHeader.IDE == CAN_ID_STD)
+//     {
+//       printf("Message has standard ID type...\r\n");
+//       printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
 
-    }
-    else if (RxHeader.IDE == CAN_ID_EXT)
-    {
-      printf("Message has extended ID type...\r\n");
-      printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
-    }
-    else
-    {
-      printf("ERROR: Unknown IDE type\r\n");
-      return;
-    }
+//     }
+//     else if (RxHeader.IDE == CAN_ID_EXT)
+//     {
+//       printf("Message has extended ID type...\r\n");
+//       printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
+//     }
+//     else
+//     {
+//       printf("ERROR: Unknown IDE type\r\n");
+//       return;
+//     }
 
-    // Get data... 
-    // If len(data) < 8 (less than 64 bytes) does the data fill from the front or the back of the array?
-    printf("Message length is %ld byte(s)", RxHeader.DLC);
-    for (uint8_t i = 0; i < 8; i++) {
-        printf("Byte %d: 0x%02X\r\n", i, canRX[i]);
-    }
+//     // Get data... 
+//     // If len(data) < 8 (less than 64 bytes) does the data fill from the front or the back of the array?
+//     printf("Message length is %ld byte(s)", RxHeader.DLC);
+//     for (uint8_t i = 0; i < 8; i++) {
+//         printf("Byte %d: 0x%02X\r\n", i, canRX[i]);
+//     }
 
-  } 
+//   } 
 
-}
+// }
 
 /* USER CODE END 4 */
 
