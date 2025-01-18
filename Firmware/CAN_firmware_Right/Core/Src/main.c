@@ -239,15 +239,9 @@ void send_uart_message(char *message) {
     HAL_UART_Transmit(&huart1, (uint8_t *)message, strlen(message), HAL_MAX_DELAY);
 }
 
-/**
-  * @brief  Reads CANBUS message from FIFO buffer 
-  * @author Peter Woolsey
-  * @retval None
-  */
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
 {
   //printf("Recieved CANBUS message...\r\n");
-  HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 	if (HAL_CAN_GetRxMessage(hcan1, CAN_RX_FIFO0, &RxHeader, canRX) != HAL_OK)
   {
     //printf("CAN Message Read Failed. HAL ERROR... \r\n");
@@ -266,6 +260,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
     {
       printf("Message has extended ID type...\r\n");
       printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
+
+      if(RxHeader.ExtId == 0x0CF11E05){
+        printRPM(canRX[0], canRX[1]);
+      }
     }
     else
     {
@@ -283,6 +281,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
   } 
 
 }
+void printRPM(uint8_t LSB, uint8_t MSB){
+  int RPM; 
+  RPM = MSB * 256 + LSB; 
+  printf("RPM: %d\n", RPM); 
+}
+
 
 /* USER CODE END 4 */
 

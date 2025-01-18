@@ -26,6 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h> 
 
 /* USER CODE END Includes */
 
@@ -131,10 +132,10 @@ int main(void)
   TxHeader.IDE = CAN_ID_EXT;
   TxHeader.ExtId = 0x0CF11E05;
   TxHeader.RTR = CAN_RTR_DATA;
-  TxHeader.DLC = 8;
+  TxHeader.DLC = 2;
 
-  TxData[0] = 0x11;  
-  TxData[1] = 0x11; 
+  TxData[0] = 0x9;  
+  TxData[1] = 0x10; 
   TxData[2] = 0x11; 
   TxData[3] = 0x04; 
   TxData[4] = 0x05; 
@@ -274,6 +275,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
     {
       printf("Message has extended ID type...\r\n");
       printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
+
+      if(RxHeader.ExtId == 0x0CF11E05){
+        printRPM(canRX[0], canRX[1]);
+      }
     }
     else
     {
@@ -290,6 +295,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
 
   } 
 
+}
+void printRPM(uint8_t LSB, uint8_t MSB){
+  int RPM; 
+  RPM = MSB * 256 + LSB; 
+  printf("RPM: %d", RPM); 
 }
 
 /* USER CODE END 4 */
