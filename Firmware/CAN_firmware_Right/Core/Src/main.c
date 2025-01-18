@@ -258,14 +258,14 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
     // Get header info...
     if (RxHeader.IDE == CAN_ID_STD)
     {
-      //printf("Message has standard ID type...\r\n");
-      //printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
+      printf("Message has standard ID type...\r\n");
+      printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
 
     }
     else if (RxHeader.IDE == CAN_ID_EXT)
     {
-      //printf("Message has extended ID type...\r\n");
-      //printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
+      printf("Message has extended ID type...\r\n");
+      printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
     }
     else
     {

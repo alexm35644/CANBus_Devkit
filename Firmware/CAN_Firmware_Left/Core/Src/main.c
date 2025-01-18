@@ -128,19 +128,19 @@ int main(void)
   canfil.FilterActivation = ENABLE;
   canfil.SlaveStartFilterBank = 14;
 
-  TxHeader.IDE = CAN_ID_STD;
-  TxHeader.StdId = 0x446;
+  TxHeader.IDE = CAN_ID_EXT;
+  TxHeader.ExtId = 0x0CF11E05;
   TxHeader.RTR = CAN_RTR_DATA;
   TxHeader.DLC = 8;
 
-  TxData[0] = 0x01;  
-  TxData[1] = 0x02; 
-  TxData[2] = 0x03; 
+  TxData[0] = 0x11;  
+  TxData[1] = 0x11; 
+  TxData[2] = 0x11; 
   TxData[3] = 0x04; 
   TxData[4] = 0x05; 
   TxData[5] = 0x06; 
   TxData[6] = 0x07; 
-  TxData[7] = 0x08; 
+  TxData[7] = 0x11; 
 
   //char msg[] = "Hello, UART!\r\n";
 
@@ -266,14 +266,14 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
     // Get header info...
     if (RxHeader.IDE == CAN_ID_STD)
     {
-      //printf("Message has standard ID type...\r\n");
-      //printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
+      printf("Message has standard ID type...\r\n");
+      printf("Message ID:\t%#lx\r\n",RxHeader.StdId);
 
     }
     else if (RxHeader.IDE == CAN_ID_EXT)
     {
-      //printf("Message has extended ID type...\r\n");
-      //printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
+      printf("Message has extended ID type...\r\n");
+      printf("Message ID:\t%#lx\r\n",RxHeader.ExtId);
     }
     else
     {
